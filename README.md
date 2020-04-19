@@ -27,7 +27,7 @@ Then lauch ualpn in server mode:
     > sudo ualpn -v -d -u nobody:nogroup -c 127.0.0.1@4443 -S 666
 
 Then install certbot 1.4.0 or later (at the time of this writing this is still
-in development, therefore you MUST to install it from source, for more info
+in development, therefore you MUST install it from source, for more info
 https://certbot.eff.org/docs/contributing.html):
 
     > git clone https://github.com/certbot/certbot
