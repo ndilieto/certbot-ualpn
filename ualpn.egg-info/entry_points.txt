@@ -1,0 +1,3 @@
+[certbot.plugins]
+authenticator = ualpn.ualpn:Authenticator
+

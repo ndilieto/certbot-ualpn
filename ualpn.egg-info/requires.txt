@@ -1,0 +1,7 @@
+acme>=1.4.0.dev0
+certbot>=1.4.0.dev0
+setuptools
+zope.interface
+
+[:python_version < "3.3"]
+mock

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: ualpn
+Version: 0.1.dev0
+Summary: ualpn TLS-ALPN-01 Authenticator plugin for Certbot
+Home-page: https://github.com/ndilieto/certbot-ualpn
+Author: Nicola Di Lieto
+Author-email: nicola.dilieto@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
