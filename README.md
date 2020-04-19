@@ -46,7 +46,7 @@ Then download and install this plugin:
 And finally try obtaining your certs:
 
     # certbot --agree-tos \
-        --register-unsafely-without-email 
+        --register-unsafely-without-email \
         --staging \
         -a ualpn:authenticator \
         -d www.example.com certonly
