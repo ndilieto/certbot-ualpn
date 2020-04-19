@@ -54,10 +54,6 @@ class Authenticator(common.Plugin):
 
         responses = []
         for achall in achalls:
-            kwargs = {}
-            kwargs["cert_key"] = None
-            kwargs["domain"] = achall.domain
-            validation = achall.validation(achall.account_key, **kwargs)
             message = "auth {0} {1}\n".format(achall.domain,
                     jose.b64encode(hashlib.sha256(achall.key_authorization(
                         achall.account_key).encode("utf-8")).digest()).decode())
