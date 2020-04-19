@@ -8,40 +8,40 @@ TLS connections and therefore it does NOT cause any webserver downtime.
 
 To install, first download and install ualpn:
 
-    # mkdir uacme
-    # wget -O - https://github.com/ndilieto/uacme/archive/upstream/latest.tar.gz | tar zx -C uacme --strip-components=1
-    # cd uacme
-    # ./configure
-    # make
-    # sudo make install
-    # cd ..
+    > mkdir uacme
+    > wget -O - https://github.com/ndilieto/uacme/archive/upstream/latest.tar.gz | tar zx -C uacme --strip-components=1
+    > cd uacme
+    > ./configure
+    > make
+    > sudo make install
+    > cd ..
 
 Then move your real HTTPS server to port 4443 and set it up to accept the PROXY
 protocol:
 
-    * for nginx: https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol
-    * for apache: https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html#remoteipproxyprotocol
+* for nginx: https://docs.nginx.com/nginx/admin-guide/load-balancer/using-proxy-protocol
+* for apache: https://httpd.apache.org/docs/2.4/mod/mod_remoteip.html#remoteipproxyprotocol
 
 Then lauch ualpn in server mode:
 
-    # sudo ualpn -v -d -u nobody:nogroup -c 127.0.0.1@4443 -S 666
+    > sudo ualpn -v -d -u nobody:nogroup -c 127.0.0.1@4443 -S 666
 
 Then install certbot 1.4.0 or later (at the time of this writing this is still
 in development, therefore you MUST to install it from source, for more info
 https://certbot.eff.org/docs/contributing.html):
 
-    # git clone https://github.com/certbot/certbot
-    # cd certbot
-    # python tools/venv3.py
-    # source venv3/bin/activate
-    # cd ..
+    > git clone https://github.com/certbot/certbot
+    > cd certbot
+    > python tools/venv3.py
+    > source venv3/bin/activate
+    > cd ..
 
 Then download and install this plugin:
 
-    # git clone https://github.com/ndilieto/certbot-ualpn
-    # cd certbot-ualpn
-    # python setup.py install
-    # cd ..
+    > git clone https://github.com/ndilieto/certbot-ualpn
+    > cd certbot-ualpn
+    > python setup.py install
+    > cd ..
 
 And finally try obtaining your certs:
 
