@@ -43,9 +43,7 @@ Then lauch ualpn in server mode
 
     > sudo ualpn -v -d -u nobody:nogroup -c 127.0.0.1@4443 -S 666
 
-Then install certbot 1.4.0 or later (at the time of this writing this is still
-in development, therefore you MUST install it from source, for more info
-https://certbot.eff.org/docs/contributing.html):
+Then install certbot 1.7.0 or later
 
     > git clone https://github.com/certbot/certbot
     > cd certbot
@@ -65,7 +63,7 @@ And finally try obtaining your certs:
     > certbot --agree-tos \
         --register-unsafely-without-email \
         --staging \
-        -a ualpn:authenticator \
+        -a ualpn \
         -d www.example.com certonly
 
 This plugin only supports authentication, since it is assumed that the

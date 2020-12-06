@@ -4,11 +4,11 @@ from setuptools import __version__ as setuptools_version
 from setuptools import find_packages
 from setuptools import setup
 
-version = '0.1.dev0'
+version = '0.2.dev0'
 
 install_requires=[
-    'acme>=1.4.0.dev0',
-    'certbot>=1.4.0.dev0',
+    'acme>=1.7.0',
+    'certbot>=1.7.0',
     'setuptools',
     'zope.interface',
 ]
@@ -31,7 +31,7 @@ setup(
     install_requires=install_requires,
     entry_points={
         'certbot.plugins': [
-            'authenticator = ualpn.ualpn:Authenticator',
+            'ualpn = ualpn.ualpn:Authenticator',
         ],
     },
 )

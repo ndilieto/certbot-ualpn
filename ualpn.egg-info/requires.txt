@@ -1,5 +1,5 @@
-acme>=1.4.0.dev0
-certbot>=1.4.0.dev0
+acme>=1.7.0
+certbot>=1.7.0
 setuptools
 zope.interface
 
