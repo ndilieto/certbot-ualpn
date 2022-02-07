@@ -47,8 +47,8 @@ Then install certbot 1.7.0 or later
 
     > git clone https://github.com/certbot/certbot
     > cd certbot
-    > python tools/venv3.py
-    > source venv3/bin/activate
+    > python tools/venv.py
+    > source venv/bin/activate
     > cd ..
 
 Then download and install this plugin:
